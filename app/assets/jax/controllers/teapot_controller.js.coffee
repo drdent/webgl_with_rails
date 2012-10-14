@@ -10,3 +10,4 @@ Jax.Controller.create "Teapot", ApplicationController,
     @world.addLightSource "sun"
     @world.addLightSource "candle"
     @world.addLightSource "searchlight"
+  helpers: -> [ UserInputHelper ]
