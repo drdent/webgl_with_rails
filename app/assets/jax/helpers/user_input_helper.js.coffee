@@ -24,7 +24,7 @@ Jax.getGlobal().UserInputHelper = Jax.Helper.create
       when KeyEvent.DOM_VK_D then movement.right    = 0
 
   update: (timechange) ->
-    speed = 1.5 * timechange
+    speed = 0.1
 
     @player.camera.move (movement.forward + movement.backward) * speed
     @player.camera.strafe (movement.left + movement.right) * speed
