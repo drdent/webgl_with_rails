@@ -4,5 +4,6 @@ Jax.Controller.create "Dungeon", ApplicationController,
     @world.addObject dungeon
     @player.camera.setPosition  dungeon.starting.position
     @player.camera.setDirection dungeon.starting.direction
+    dungeon.addTorches @world
 
   helpers: -> [ UserInputHelper ]

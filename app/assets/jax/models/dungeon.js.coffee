@@ -56,3 +56,13 @@ Jax.getGlobal()['Dungeon'] = Jax.Model.create
                 texcoords.push 0,1,  0,0,  1,0,  0,1,  1,0,  1,1
                 normals.push   0,-1,0,  0,-1,0,  0,-1,0,  0,-1,0,  0,-1,0,  0,-1,0
 
+  addTorches: (world) ->
+    if @map
+      for z in [0...@map.length]
+        row = @map[z]
+        for x in [0...row.length]
+          # each apostrophe (') represents a light source
+          if row[x] == "'"
+            torch = LightSource.find "torch"
+            torch.camera.setPosition x, 0, z
+            world.addLightSource torch
