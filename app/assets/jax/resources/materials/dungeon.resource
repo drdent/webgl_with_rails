@@ -24,7 +24,7 @@ shininess: 30
 layers:
   - type: Lighting
   - type: Texture
-    path: /path/to/texture.png
+    path: /images/rock.png
     flip_y: false
     scale_x: 1.0
     scale_y: 1.0
